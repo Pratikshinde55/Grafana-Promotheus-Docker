@@ -6,6 +6,14 @@ Grafana Connect to Prometheus and Prometheus is connect to docker
 
 I use amazon linux2 AMI instance for docker.
 
+ Install Docker command:
+
+    yum install docker -y 
+
+ Start Docker service:
+
+     systemctl start docker
+
 - Note:
 
   Docker collects there own metrics on localhost, When we want to collect that Docker metrics then need to expose docker metrics to outside world.
@@ -16,11 +24,21 @@ I use amazon linux2 AMI instance for docker.
 
    This method is known as "Pull method" or "Aagentless" connection. This is possible because Docker collects their own metrics.
 
+Expose Docker metrics:
 
- Install Docker command:
+      vim /etc/docker/daemon.json
 
-    yum install docker -y 
+![image](https://github.com/user-attachments/assets/296ef590-a28c-46ee-a2fa-b882ab179511)
 
- Start Docker service:
+Here, 
 
-     systemctl start docker
+" /etc/docker/daemon.json " => This location for "linux host system" where install docker and expose metrics.
+
+"metrics-addr" => This is endpoint means metrics exposes to IP and Port no.
+
+"0.0.0.0:9323" => '0.0.0.0' means what ever Public IP of Docker Host that take here and '9323' is port no for exposing metrics.
+
+
+
+
+ 
