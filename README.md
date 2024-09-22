@@ -39,6 +39,38 @@ Here,
 "0.0.0.0:9323" => '0.0.0.0' means what ever Public IP of Docker Host that take here and '9323' is port no for exposing metrics.
 
 
+- Note:
+
+  After do change in settings then need to restart docker services to apply changes
+
+Command for restart docker service:
+
+     systemctl restart docker
+
+
+we can also check docker exposing metrics on google -->> Docker EC2 public IP : 9323 
+
+![image](https://github.com/user-attachments/assets/1bf91637-f964-4e73-a369-fc2d996345d6)
+
+Docker Host EC2 inbound rules must allow.
+
+
+### ADD Docker to Prometheus
+
+Add target node to prometheus
+
+On Prometheus EC2 terminal we add target node that Docker linux OS where i installed docker metrics exposing program.
+
+- Note:
+
+  "promethus.yml" this is prometheus config file here we add target node details.
+
+Open prometheus.yml file:
+
+     vim prometheus.yml
+     
+![image](https://github.com/user-attachments/assets/4692af69-cdcb-4a7a-886f-bc638d1f9dd0)
+
 
 
  
