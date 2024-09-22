@@ -1,6 +1,9 @@
 # Grafana-Promotheus-Docker
 Grafana Connect to Prometheus and Prometheus is connect to docker 
 
+### SetUp- Grafana connect to prometheus
+
+Link-  https://github.com/Pratikshinde55/Grafana-prometheus-linuxOS.git 
 
 ### Docker Setup:
 
@@ -71,6 +74,36 @@ Open prometheus.yml file:
      
 ![image](https://github.com/user-attachments/assets/4692af69-cdcb-4a7a-886f-bc638d1f9dd0)
 
+Here, Target means Docker EC2 public IP + port no of exposing.
 
+- Note:
+
+  Docker Host EC2 instance Inbound rules must be allow.
+
+After doing change in prometheus.yml config file then need restart Prometheus server for apply change:
+
+Command for delete prometheus process :
+
+     pkill prometheus
+
+Command for Start Prometheus server:
+
+     ./prometheus &
+
+ ![image](https://github.com/user-attachments/assets/3c2b8933-51e5-447c-898e-b80a1e5ca584)
+
+ ![image](https://github.com/user-attachments/assets/a422f3ec-745c-48eb-a677-f25841e85f7a)
+
+
+### On Grafana 
+
+We can get info of docker because Grafana is connected to Prometheus DataSource.
+
+![image](https://github.com/user-attachments/assets/a00f0dc1-1dc7-4a34-9821-cfcf514f6d6d)
+
+
+Create DashBoard using Grafana
+
+![image](https://github.com/user-attachments/assets/8f5f2afd-cf8e-40e8-a7d8-51c5473694f4)
 
  
