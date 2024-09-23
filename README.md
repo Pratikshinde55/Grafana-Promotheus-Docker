@@ -1,11 +1,10 @@
-# Grafana-Promotheus-Docker
-Grafana Connect to Prometheus and Prometheus is connect to docker 
+# Grafana Connect to Prometheus and Prometheus is connect to docker 
 
-### SetUp- Grafana connect to prometheus
+### Step-1: SetUp- Grafana connect to prometheus
 
 Link-  https://github.com/Pratikshinde55/Grafana-prometheus-linuxOS.git 
 
-### Docker Setup:
+### Step-2 Docker Setup
 
 I use amazon linux2 AMI instance for docker.
 
@@ -58,7 +57,11 @@ we can also check docker exposing metrics on google -->> Docker EC2 public IP : 
 Docker Host EC2 inbound rules must allow.
 
 
-### ADD Docker to Prometheus
+### Step-3: ADD Docker on Prometheus
+
+Prometheus is used for monitoring metrics and Alerting. Prometheus collect data and store at own DataBase(TSDB).
+
+Prometheus collect metrics from any system with help of Agent or Agentless.
 
 Add target node to prometheus
 
@@ -95,7 +98,7 @@ Command for Start Prometheus server:
  ![image](https://github.com/user-attachments/assets/a422f3ec-745c-48eb-a677-f25841e85f7a)
 
 
-### On Grafana 
+### Step-4: On Grafana 
 
 We can get info of docker because Grafana is connected to Prometheus DataSource.
 
