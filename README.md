@@ -1,5 +1,5 @@
 # Grafana Connect to Prometheus and Prometheus is connect to docker 
-I need to highlight these ==very important words==
+![alt text](image.jpg)
 ### Step-1: SetUp- Grafana connect to prometheus
 
 Link-  [Grafana-Connect-prometheus](https://github.com/Pratikshinde55/Grafana-prometheus-linuxOS.git) 
