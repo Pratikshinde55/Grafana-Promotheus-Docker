@@ -18,15 +18,15 @@ I use amazon linux2 AMI instance for docker.
 
 - Note:
 
-  **Docker collects there own metrics on localhost**, When we want to collect that Docker metrics then need to **expose docker metrics** to outside world.
+**Docker collects there own metrics on localhost**, When we want to collect that Docker metrics then need to **expose docker metrics** to outside world.
 
-  For this Docker and prometheus provide a file
+ For this Docker and prometheus provide a file
 
-  Search on Google "Docker connect to prometheus" Link- [Docker-metrics_for-Prometheus](https://docs.docker.com/engine/daemon/prometheus/)
+ Search on Google "Docker connect to prometheus" Link- [Docker-metrics_for-Prometheus](https://docs.docker.com/engine/daemon/prometheus/)
 
- #### Prometheus Agentless or Pull type connection to Target:
+#### Prometheus Agentless or Pull type connection to Target:
 
-   This method is known as "Pull method" or "Aagentless" connection. This is possible because Docker collects their own metrics.
+This method is known as "Pull method" or "Aagentless" connection. This is possible because Docker collects their own metrics.
 
 Expose Docker metrics:
 
@@ -36,16 +36,16 @@ Expose Docker metrics:
 
 Here, 
 
-" /etc/docker/daemon.json " => This location for "linux host system" where install docker and expose metrics.
+**/etc/docker/daemon.json** = This location for "linux host system" where install docker and expose metrics.
 
-"metrics-addr" => This is endpoint means metrics exposes to IP and Port no.
+**metrics-addr** = This is endpoint means metrics exposes to IP and Port no.
 
-"0.0.0.0:9323" => '0.0.0.0' means what ever Public IP of Docker Host that take here and '9323' is port no for exposing metrics.
+**0.0.0.0:9323** = '0.0.0.0' means what ever Public IP of Docker Host that take here and '9323' is port no for exposing metrics.
 
 
 - Note:
 
-  After do change in settings then need to restart docker services to apply changes
+  After do change in settings then need to **restart docker services** to apply changes
 
 Command for restart docker service:
 
@@ -61,9 +61,9 @@ Docker Host EC2 inbound rules must allow.
 
 ### Step-3: ADD Docker on Prometheus
 
-Prometheus is used for monitoring metrics and Alerting. Prometheus collect data and store at own DataBase(TSDB).
+**Prometheus is used for monitoring metrics and Alerting. Prometheus collect data and store at own DataBase(TSDB).**
 
-Prometheus collect metrics from any system with help of Agent or Agentless.
+**Prometheus collect metrics from any system with help of Agent or Agentless.**
 
 Add target node to prometheus
 
@@ -71,7 +71,7 @@ On Prometheus EC2 terminal we add target node that Docker linux OS where i insta
 
 - Note:
 
-  "promethus.yml" this is prometheus config file here we add target node details.
+**"promethus.yml"** this is prometheus config file here we add target node details.
 
 Open prometheus.yml file:
 
@@ -83,9 +83,9 @@ Here, Target means Docker EC2 public IP + port no of exposing.
 
 - Note:
 
-  Docker Host EC2 instance Inbound rules must be allow.
+Docker Host EC2 instance Inbound rules must be allow.
 
-After doing change in prometheus.yml config file then need restart Prometheus server for apply change:
+After doing change in prometheus.yml config file then need **restart Prometheus server** for apply change:
 
 Command for delete prometheus process :
 
