@@ -2,7 +2,7 @@
 
 ### Step-1: SetUp- Grafana connect to prometheus
 
-Link-  https://github.com/Pratikshinde55/Grafana-prometheus-linuxOS.git 
+Link-  [Grafana-prometheus](https://github.com/Pratikshinde55/Grafana-prometheus-linuxOS.git) 
 
 ### Step-2 Docker Setup
 
